@@ -2,3 +2,4 @@
 
 using Loops;
 
+Console.WriteLine("Running ForLoops example...");

@@ -4,35 +4,36 @@
 // This program demonstrates the use of numeric data types in C#
 
 // sbyte from -128 to 127
-sbyte mySbyte; 
+
+sbyte mySbyte;
 mySbyte = 105;
 var mySbyte2 = 105;
 var mySbyte3 = (sbyte)105;
 Console.WriteLine($"Sbyte max value is {sbyte.MaxValue}, min value is {sbyte.MinValue}");
 
 // byte from 0 to 255
-byte myByte; 
+byte myByte;
 myByte = 255;
 var myByte2 = 255;
 var myByte3 = (byte)255;
 Console.WriteLine($"Byte max value is {byte.MaxValue}, min value is {byte.MinValue}");
 
 // short from -32,768 to 32,767
-short myShort; 
+short myShort;
 myShort = 31989;
 var myShort2 = 31989; // Int32
 var myShort3 = (short)31989;
 Console.WriteLine($"Short max value is {short.MaxValue}, min value is {short.MinValue}");
 
 // ushort from 0 to 65,535
-ushort myUshort; 
+ushort myUshort;
 myUshort = 65535;
 var myUshort2 = 65535; // Int32
 var myUshort3 = (ushort)65535;
 Console.WriteLine($"Ushort max value is {ushort.MaxValue}, min value is {ushort.MinValue}");
 
 // int from -2,147,483,648 to 2,147,483,647
-int myInt; 
+int myInt;
 myInt = 2147483647;
 var myInt2 = 2147483647; // Int32
 var myInt3 = (int)2147483647;
@@ -41,7 +42,7 @@ int myCoolInt = 5;
 Console.WriteLine($"Int max value is {int.MaxValue},  min value is {int.MinValue}");
 
 // uint from 0 to 4,294,967,295
-uint myUint; 
+uint myUint;
 myUint = 4294967295;
 var myUint2 = -4294967295; // Long or Int64
 Console.WriteLine($"Uint max value is {uint.MaxValue}, min value is {uint.MinValue}");
@@ -81,7 +82,7 @@ int product = 5 * 10;
 Console.WriteLine($"5 * 10 = {product}");
 
 // Why is this 0?
-int quotient = 5 / 10; 
+int quotient = 5 / 10;
 Console.WriteLine($"5 / 10 = {quotient}");
 
 // Why is this 1?
@@ -93,4 +94,4 @@ int coolInt = 6;
 sbyte coolSbyte = 3;
 var sum2 = coolInt + coolSbyte;
 //sbyte sum3 = coolInt + coolSbyte; Error, why is that?
-Console.WriteLine($"Sum of int {coolInt }and sbyte {coolSbyte} is " + sum2);
+Console.WriteLine($"Sum of int {coolInt}and sbyte {coolSbyte} is " + sum2);

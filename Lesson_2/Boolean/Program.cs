@@ -1,4 +1,5 @@
 ﻿// We can declare a boolean variable
+
 bool myBool;
 bool my_bool;
 bool MyBool;

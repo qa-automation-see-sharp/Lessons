@@ -4,6 +4,7 @@
 // This program demonstrates the use of floating-point numeric data types in C#
 
 // float from ±1.5 x 10^−45 to ±3.4 x 10^38  precision of 7 digits 4 bytes or 32 bits
+
 float myFloat = 3.14f;
 var myFloat2 = 3.14f;
 Console.WriteLine($"Float max value is {float.MaxValue}, min value is {float.MinValue}");

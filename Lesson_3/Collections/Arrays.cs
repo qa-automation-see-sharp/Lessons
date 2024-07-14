@@ -9,11 +9,20 @@ public class Arrays
         // - arrays are fixed in size
         // - we can get values from an array
         // - we can set values in an array
-        
-        //ways of initialization 
-        int[] intArray = [1, 2, 3, 4, 5];
 
-        string[] stringArray = ["one", "two", "three", "four", "five"];
+        //ways of initialization 
+        int[] intArray1 = new int[5];
+        intArray1[0] = 1;
+        intArray1[1] = 2;
+        int[] intArrays2 = new int[] { 1, 2, 3, 4, 5 };
+        int[] intArray3 = [1, 2, 3, 4, 5];
+
+        string[] stringArray1 = new string[5];
+        stringArray1[0] = "one";
+        stringArray1[1] = "two";
+
+        string[] stringArray2 = new string[] { "one", "two", "three", "four", "five" };
+        string[] stringArray3 = ["one", "two", "three", "four", "five"];
 
         // here is how we declare an array
         int[] numbers = new int[3];

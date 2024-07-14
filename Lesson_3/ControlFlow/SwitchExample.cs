@@ -4,7 +4,6 @@ public class SwitchExample
 {
     public void Run()
     {
-        
         // The switch statement is used to select one of
         // many code blocks to be executed.
         // The switch expression is used to select one of
@@ -12,7 +11,7 @@ public class SwitchExample
 
         // here is an example of a switch statement
         int dayOfWeek = 1;
-        
+
         switch (dayOfWeek)
         {
             case 1:
@@ -40,12 +39,12 @@ public class SwitchExample
                 Console.WriteLine("Invalid day");
                 break;
         }
-        
+
         Console.WriteLine("This is after the switch!");
-        
+
         // here is an example of a switch expression
         string dayOfWeekName = "Monday";
-        
+
         string result = dayOfWeekName switch
         {
             "Monday" => "First day of the week",

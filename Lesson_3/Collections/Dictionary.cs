@@ -40,10 +40,10 @@ public class Dictionary
         // here is how we declare and initialize a dictionary
         Dictionary<int, string> numbers = new Dictionary<int, string>
         {
-            {1, "one"},
-            {2, "two"},
-            {3, "three"},
-            {4, "four"},
+            { 1, "one" },
+            { 2, "two" },
+            { 3, "three" },
+            { 4, "four" },
         };
 
         // here is how we get the count of a dictionary
@@ -56,14 +56,15 @@ public class Dictionary
 
         // numbers is now:
         // [2 => "two"]
-        
+
         var users = new Dictionary<string, Dictionary<string, double>>
         {
-            { "John", new Dictionary<string, double>
             {
-                { "password", 1000000.99d }
-            } }
+                "John", new Dictionary<string, double>
+                {
+                    { "password", 1000000.99d }
+                }
+            }
         };
     }
 }
-

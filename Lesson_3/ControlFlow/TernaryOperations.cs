@@ -9,7 +9,7 @@ public class TernaryOperations
         // The syntax is: condition ? valueIfTrue : valueIfFalse
         // The condition is evaluated first, if it is true, the valueIfTrue is returned, otherwise the valueIfFalse is returned
         int number = -5;
-        
+
         // variable = (condition) ? expressionTrue : expressionFalse;
         string result = number > 0 ? "Positive" : "Negative";
         Console.WriteLine(result);

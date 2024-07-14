@@ -20,6 +20,7 @@ public class While
             Console.WriteLine(count);
             count++;
         } while (count < 5);
+
         Console.WriteLine($"The total count is {count}!");
     }
 }
