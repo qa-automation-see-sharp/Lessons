@@ -4,7 +4,7 @@ public class While
 {
     public void Run()
     {
-        int count = 0;
+        var count = 0;
         while (count < 5)
         {
             Console.WriteLine(count);

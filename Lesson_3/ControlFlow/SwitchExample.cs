@@ -10,7 +10,7 @@ public class SwitchExample
         // many code blocks to be executed.
 
         // here is an example of a switch statement
-        int dayOfWeek = 1;
+        var dayOfWeek = 1;
 
         switch (dayOfWeek)
         {
@@ -43,9 +43,9 @@ public class SwitchExample
         Console.WriteLine("This is after the switch!");
 
         // here is an example of a switch expression
-        string dayOfWeekName = "Monday";
+        var dayOfWeekName = "Monday";
 
-        string result = dayOfWeekName switch
+        var result = dayOfWeekName switch
         {
             "Monday" => "First day of the week",
             "Tuesday" => "Second day of the week",

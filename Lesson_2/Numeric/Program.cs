@@ -36,8 +36,8 @@ Console.WriteLine($"Ushort max value is {ushort.MaxValue}, min value is {ushort.
 int myInt;
 myInt = 2147483647;
 var myInt2 = 2147483647; // Int32
-var myInt3 = (int)2147483647;
-int myCoolInt = 5;
+var myInt3 = 2147483647;
+var myCoolInt = 5;
 //int myCoolInt2 = 5.5;
 Console.WriteLine($"Int max value is {int.MaxValue},  min value is {int.MinValue}");
 
@@ -50,14 +50,14 @@ Console.WriteLine($"Uint max value is {uint.MaxValue}, min value is {uint.MinVal
 long myLong; // long from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
 myLong = 9223372036854775807;
 var myLong2 = 9223372036854775807; //Long or Int64
-var myLong3 = (long)9223372036854775807;
+var myLong3 = 9223372036854775807;
 Console.WriteLine($"Long max value is {long.MaxValue}, min value is {long.MinValue}");
 
 // ulong from 0 to 18,446,744,073,709,551,615
 ulong myUlong;
 myUlong = 18446744073709551615;
 var myUlong2 = 18446744073709551615; // ULong or UInt64
-var myUlong4 = (ulong)18446744073709551615;
+var myUlong4 = 18446744073709551615;
 var myUlong3 = -18446744073709551615d; // Decimal
 Console.WriteLine($"Ulong max value is {ulong.MaxValue},  min value is {ulong.MinValue}");
 
@@ -74,23 +74,23 @@ var myNuint3 = (nuint)125; // UIntPtr
 Console.WriteLine($"Nuint max value is {nuint.MaxValue}, min value is {nuint.MinValue}");
 
 // Action with numeric types
-int sum = 5 + 10;
+var sum = 5 + 10;
 Console.WriteLine($"5 + 10 = {sum}");
-int difference = 5 - 10;
+var difference = 5 - 10;
 Console.WriteLine($"5 - 10 = {difference}");
-int product = 5 * 10;
+var product = 5 * 10;
 Console.WriteLine($"5 * 10 = {product}");
 
 // Why is this 0?
-int quotient = 5 / 10;
+var quotient = 5 / 10;
 Console.WriteLine($"5 / 10 = {quotient}");
 
 // Why is this 1?
-int quotient2 = 15 / 10;
+var quotient2 = 15 / 10;
 Console.WriteLine($"15 / 10 = {quotient2}");
 
 
-int coolInt = 6;
+var coolInt = 6;
 sbyte coolSbyte = 3;
 var sum2 = coolInt + coolSbyte;
 //sbyte sum3 = coolInt + coolSbyte; Error, why is that?

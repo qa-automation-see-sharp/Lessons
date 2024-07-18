@@ -9,7 +9,7 @@ myBool = true;
 myBool = false;
 
 // We can declare and assign in one line
-bool coolBool = true;
+var coolBool = true;
 
 // We can re-assign a value to these variables
 coolBool = false;
@@ -17,18 +17,18 @@ coolBool = false;
 // We can do boolean logic with these variables
 
 // && is the AND operator as long as both sides are true the result is true
-bool trueAndFalse = true && false; // false
-bool trueAndTrue = true && true; // true
-bool falseAndFalse = false && false; // false
+var trueAndFalse = true && false; // false
+var trueAndTrue = true && true; // true
+var falseAndFalse = false && false; // false
 
 // || is the OR operator as log as one side is true the result is true
-bool trueOrFalse = true || false; // true
-bool trueOrTrue = true || true; // true
-bool falseOrFalse = false || false; // false
+var trueOrFalse = true || false; // true
+var trueOrTrue = true || true; // true
+var falseOrFalse = false || false; // false
 
 // ! is the NOT operator it inverts the value
-bool notTrue = !true; // false
-bool notFalse = !false; // true
+var notTrue = !true; // false
+var notFalse = !false; // true
 
 // The results of our boolean logic
 // as we see with string interpolation:

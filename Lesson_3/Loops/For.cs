@@ -9,10 +9,7 @@ public class For
         // but a for loop is designed to count!
 
         // here is the syntax for a for loop:
-        for (var i = 0; i < 10; i++)
-        {
-            Console.WriteLine(i);
-        }
+        for (var i = 0; i < 10; i++) Console.WriteLine(i);
 
         // a for loop has three parts:
         // 1. the initializer: int i = 0;
@@ -26,7 +23,7 @@ public class For
         // just like we did with a while loop.
 
         // here's an example of a for loop with a break:
-        for (int i = 0; i < 10; i++)
+        for (var i = 0; i < 10; i++)
         {
             if (i == 5)
             {
@@ -38,7 +35,7 @@ public class For
         }
 
         // here's an example of a for loop with a continue:
-        for (int i = 0; i < 10; i++)
+        for (var i = 0; i < 10; i++)
         {
             if (i == 5)
             {

@@ -19,7 +19,7 @@ public class Dictionary
         // - we can get the values of a dictionary
 
         // here is how we declare a dictionary
-        Dictionary<string, string> words = new Dictionary<string, string>();
+        var words = new Dictionary<string, string>();
 
         // here is how we add values to a dictionary
         words.Add("one", "uno");
@@ -28,9 +28,9 @@ public class Dictionary
         words["one"] = "cuatro";
 
         // here is how we get values from a dictionary
-        string one = words["one"];
-        string two = words["two"];
-        string three = words["three"];
+        var one = words["one"];
+        var two = words["two"];
+        var three = words["three"];
 
         // words is now:
         // ["one" => "cuatro"]
@@ -38,16 +38,16 @@ public class Dictionary
         // ["three" => "tres"]
 
         // here is how we declare and initialize a dictionary
-        Dictionary<int, string> numbers = new Dictionary<int, string>
+        var numbers = new Dictionary<int, string>
         {
             { 1, "one" },
             { 2, "two" },
             { 3, "three" },
-            { 4, "four" },
+            { 4, "four" }
         };
 
         // here is how we get the count of a dictionary
-        int count = numbers.Count; //4
+        var count = numbers.Count; //4
 
         // here is how we remove a value from a dictionary
         numbers.Remove(1);

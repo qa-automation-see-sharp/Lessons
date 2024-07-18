@@ -3,6 +3,7 @@
 // Times can be assigned to a TimeOnly variable
 
 // we can declare a DateTime variable
+
 DateTime myDateTime;
 
 // we can declare a DateOnly variable
@@ -18,9 +19,9 @@ myDate = new DateOnly(2024, 1, 23);
 myTime = new TimeOnly(1, 23, 45);
 
 // We can declare and assign in one line
-DateTime myDateTime2 = DateTime.Now;
-DateOnly myDate2 = new DateOnly(2024, 1, 23);
-TimeOnly myTime2 = new TimeOnly(1, 23, 45);
+var myDateTime2 = DateTime.Now;
+var myDate2 = new DateOnly(2024, 1, 23);
+var myTime2 = new TimeOnly(1, 23, 45);
 
 // We can re-assign a value to these variables
 myDateTime = DateTime.Now;
@@ -32,7 +33,7 @@ myTime = new TimeOnly(1, 23, 45);
 
 // we can make a DateTime variable out of
 // a DateOnly and a TimeOnly variable
-DateTime dateTimeFromCombination = new DateTime(
+var dateTimeFromCombination = new DateTime(
     myDate,
     myTime);
 

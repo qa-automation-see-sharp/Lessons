@@ -16,7 +16,7 @@ public class List
         // - we can sort a list!
 
         // here is how we declare a list
-        List<string> words = new List<string>();
+        var words = new List<string>();
 
         // here is how we add values to a list
         words.Add("one");
@@ -25,9 +25,9 @@ public class List
         words[0] = string.Empty; // " "
 
         // here is how we get values from a list
-        string firstWord = words[0];
-        string secondWord = words[1];
-        string thirdWord = words[2];
+        var firstWord = words[0];
+        var secondWord = words[1];
+        var thirdWord = words[2];
 
         words[0] = "four";
         // words is now:
@@ -40,16 +40,16 @@ public class List
         // ["two"]
 
         // here is how we declare and initialize a list
-        List<int> numbers = new List<int>
+        var numbers = new List<int>
         {
             1,
             2,
             3,
-            4,
+            4
         };
 
         // here is how we get the count of a list
-        int count = numbers.Count; //4
+        var count = numbers.Count; //4
 
         // here is how we remove a value from a list
         numbers.Remove(1);
