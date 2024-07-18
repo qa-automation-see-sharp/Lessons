@@ -35,7 +35,12 @@ Git is widely used in the software development industry and is an essential tool
 - git branch -M main
 - git push -u origin main
 
-okutafin1992@gmail.com
+**dotnet terminal/console commands:**
+
+- dotnet new - create a new project
+- dotnet build - build a project and all of its dependencies
+- dotnet run - run a project
+- dotnet test - run tests using a test runner
 
 
 

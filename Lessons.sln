@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OopIntro", "Lesson_4\OopInt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebuggingAndExceptions", "Lesson_4\DebuggingAndExceptions\DebuggingAndExceptions.csproj", "{02613776-B19E-4513-914F-988329C9ECD0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_5", "Lesson_5", "{B6F6E2BA-D6EA-4F0D-8879-9EC9D7480C2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
