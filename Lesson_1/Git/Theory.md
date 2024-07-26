@@ -42,5 +42,13 @@ Git is widely used in the software development industry and is an essential tool
 - dotnet run - run a project
 - dotnet test - run tests using a test runner
 
+**How to create a dotnet Solution with a project from a terminal:**
+
+- dotnet new sln --output MySolution
+- cd MySolution
+- dotnet new console --output MyProject
+- dotnet sln add MyProject
+
+
 
 
