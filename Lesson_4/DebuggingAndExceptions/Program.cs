@@ -4,6 +4,7 @@
 // exceptions are "thrown" when the program encounters an error
 
 // let's create a simple program that throws an exception
+
 int IntegerDivision(int x, int y)
 {
     return x / y;

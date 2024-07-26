@@ -76,7 +76,7 @@ public class FieldsAndProperties
             set => Name = value;
         }
     }
-    
+
     // A filed or a property can be public, private, protected, internal, protected internal, or private protected
     // A field or a property can be readonly, static, or const
     // A field or a property can be a value type, a reference type, or a nullable type
@@ -84,10 +84,10 @@ public class FieldsAndProperties
     {
         // Private field/property usually named with an underscore _defaultName 
         private string _defaultName = "John";
-        
+
         // Public field/property usually named with a capital letter DefaultName
         private const string DefaultName2 = "John";
-        
+
         // Public field/property usually named with a capital letter Name
         public string Name { get; set; } = "John";
         public string Name2 => _defaultName;

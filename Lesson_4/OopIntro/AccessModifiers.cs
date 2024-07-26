@@ -26,7 +26,7 @@ public class AccessModifiers
 class Person
 {
     private string _name;
-   // public Person3  _person = new Person3(); this will cause a compilation error
+    // public Person3  _person = new Person3(); this will cause a compilation error
 }
 
 //this is a public class, we can access it from any other namespace
