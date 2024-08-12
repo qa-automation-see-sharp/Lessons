@@ -1,0 +1,1 @@
+**Here will be posted information and materials for C# automation course**
