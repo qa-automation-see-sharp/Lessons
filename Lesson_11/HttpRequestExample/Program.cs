@@ -123,11 +123,11 @@ string responseStringFromPut = await responsePut.Content.ReadAsStringAsync();
 
 
 // // POST
-// var payloadPost = new StringContent("Hello, from POST");
-// HttpResponseMessage responsePost = await httpClient.PostAsync(uri, new StringContent("Hello, from POST"));
-// string responseStringFromPost = await responsePost.Content.ReadAsStringAsync();
-//
-//
+var payloadPost = new StringContent("Hello, from POST");
+HttpResponseMessage responsePost = await httpClient.PostAsync(uri, new StringContent("Hello, from POST"));
+string responseStringFromPost = await responsePost.Content.ReadAsStringAsync();
+
+
 
 // DELETE
 Uri uriDeleteBook = new Uri(httpClient.BaseAddress,
@@ -147,7 +147,7 @@ string responseStringFromDelete = await responseDelete.Content.ReadAsStringAsync
 
 Console.WriteLine(responseStringFromDelete);
 
-public class Book
+public sealed class Book
 {
     public string? Title { get; set; }
     public string? Author { get; set; }
