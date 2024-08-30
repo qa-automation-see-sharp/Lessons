@@ -1,0 +1,10 @@
+﻿services:
+  db:
+    image: mongo:latest
+    hostname: library_mongodb
+    ports:
+      - "27017:27017"
+    healthcheck:
+      test: test $$(echo "rs.initiate({_id:'rs0', members:[{ _id:0, host:'localhost:27019' }]}).ok || rs.status().ok" | mongo --quiet) -eq 1
+      interval: 10s
+      start_period: 30s
