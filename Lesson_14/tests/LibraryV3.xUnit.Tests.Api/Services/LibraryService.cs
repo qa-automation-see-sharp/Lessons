@@ -6,17 +6,15 @@ using Newtonsoft.Json;
 
 namespace LibraryV3.xUnit.Tests.Api.Services;
 
-public class LibraryService 
+public class LibraryService : IAsyncLifetime
 {
-    private WebApplicationFactory<IApiMarker> _factory;
+    private readonly WebApplicationFactory<IApiMarker> _factory;
     private readonly HttpClient _httpClient;
     public User User;
     public AuthorizationToken AuthorizationToken;
 
     public LibraryService()
     {
-        _factory = new WebApplicationFactory<IApiMarker>();
-        _httpClient = _factory.CreateClient();
         User = DataHelper.CreateUser();
     }
 
@@ -57,6 +55,7 @@ public class LibraryService
     {
         var url = TestApiEndpoint.Users.Register;
 
+        //RequestBody creation
         var json = JsonConvert.SerializeObject(user);
         var content = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -154,5 +153,15 @@ public class LibraryService
         Console.WriteLine($"Content: \n{jsonString}");
 
         return response;
+    }
+
+    public async Task InitializeAsync()
+    {
+       Console.WriteLine("Set Up from LibraryService");
+    }
+
+    public async Task DisposeAsync()
+    {
+        Console.WriteLine("Tear Down from LibraryService");
     }
 }

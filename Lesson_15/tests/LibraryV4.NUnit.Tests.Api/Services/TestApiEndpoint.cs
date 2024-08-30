@@ -1,4 +1,4 @@
-namespace LibraryV2.Tests.Api.Services;
+namespace LibraryV4.NUnit.Tests.Api.Services;
 
 public static class TestApiEndpoint
 {
