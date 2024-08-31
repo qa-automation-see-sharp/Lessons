@@ -8,13 +8,14 @@ namespace LibraryV3.xUnit.Tests.Api.Services;
 
 public class LibraryService : IAsyncLifetime
 {
-    private readonly WebApplicationFactory<IApiMarker> _factory;
     private readonly HttpClient _httpClient;
     public User User;
     public AuthorizationToken AuthorizationToken;
 
     public LibraryService()
     {
+        WebApplicationFactory<IApiMarker> factory = new();
+        _httpClient = factory.CreateClient();
         User = DataHelper.CreateUser();
     }
 
