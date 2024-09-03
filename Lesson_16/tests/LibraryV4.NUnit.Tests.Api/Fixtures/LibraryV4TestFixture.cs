@@ -4,7 +4,7 @@ using LibraryV4.Tests.Utils.WebAppFactories;
 
 namespace LibraryV4.NUnit.Tests.Api.Fixtures;
 
-[TestFixture]
+[SetUpFixture]
 public class LibraryV4TestFixture
 {
     private LibraryV4WebAppFactory _webAppFactory;
@@ -23,7 +23,9 @@ public class LibraryV4TestFixture
         //Creating an instance of LibraryHttpService
         LibraryHttpService = new LibraryV4HttpService(httpClient);
         //Creating an instance of MongoDbService
-        MongoDbService = new MongoDbService(_webAppFactory.MongoDbContainer.GetConnectionString(), "LibraryV4");
+        var connectionString = _webAppFactory.MongoDbContainer.GetConnectionString();
+        Console.WriteLine($"Connection string: {connectionString}");
+        MongoDbService = new MongoDbService(connectionString, "LibraryV4");
         //Creating a default user
         await LibraryHttpService.CreateDefaultUser();
         await LibraryHttpService.AuthorizeLikeDefaultUser();

@@ -6,8 +6,11 @@ using Newtonsoft.Json;
 
 namespace LibraryV4.NUnit.Tests.Api.EndpointsTests;
 
+[TestFixture]
 public class GetBookTests : LibraryV4TestFixture
 {
+    // Turn yours attention to the run time of the tests 
+    // this test is twice faster than the one below
     [Test]
     public async Task Get_ExistingBook_ReturnsBook_CreateBookWithDb()
     {
@@ -15,12 +18,13 @@ public class GetBookTests : LibraryV4TestFixture
         //Create book with MongoDB
         var bookDto = DataHelper.CreateBookDto();
         await MongoDbService.Books.InsertItem(bookDto);
-        
+
         // Act
         var getBookResponse = await LibraryHttpService.GetBooksByTitle(bookDto.Title);
         var jsonString = await getBookResponse.Content.ReadAsStringAsync();
         var books = JsonConvert.DeserializeObject<List<Book>>(jsonString);
-        
+
+        // Assert
         Assert.Multiple(() =>
         {
             //Assert.That(createBookResponse.StatusCode, Is.EqualTo(HttpStatusCode.Created));
@@ -30,21 +34,22 @@ public class GetBookTests : LibraryV4TestFixture
             Assert.That(books[0].YearOfRelease, Is.EqualTo(bookDto.YearOfRelease));
         });
     }
-    
+
+    // this test is twice slower than the one above
     [Test]
     public async Task Get_ExistingBook_ReturnsBook_CreateBookWithHttp()
     {
         // Arrange
-        
-        //Create book with HTTP POST request
+        // Create book with HTTP POST request
         var book = DataHelper.CreateBook();
         var createBookResponse = await LibraryHttpService.PostBook(book);
-        
+
         // Act
         var getBookResponse = await LibraryHttpService.GetBooksByTitle(book.Title);
         var jsonString = await getBookResponse.Content.ReadAsStringAsync();
         var books = JsonConvert.DeserializeObject<List<Book>>(jsonString);
-        
+
+        // Assert
         Assert.Multiple(() =>
         {
             Assert.That(createBookResponse.StatusCode, Is.EqualTo(HttpStatusCode.Created));
