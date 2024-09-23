@@ -1,4 +1,3 @@
-using System.Collections.ObjectModel;
 using System.Drawing;
 using OpenQA.Selenium;
 using static Test.Utils.Swd.Waits.WaitHelper;

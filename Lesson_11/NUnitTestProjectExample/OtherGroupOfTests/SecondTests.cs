@@ -1,4 +1,3 @@
-using System.Collections;
 using NUnitTestProjectExample.Fixtures;
 
 namespace NUnitTestProjectExample.OtherGroupOfTests;

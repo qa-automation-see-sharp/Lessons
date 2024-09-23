@@ -1,5 +1,4 @@
 using OpenQA.Selenium;
-using Tests.Utils.Swd.BasePage;
 
 namespace NUnit.Tests.UI.PageObjects;
 

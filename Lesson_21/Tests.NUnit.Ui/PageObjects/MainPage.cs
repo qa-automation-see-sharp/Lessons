@@ -10,11 +10,8 @@ public class MainPage : BasePage
     protected string Url => "https://demoqa.com/";
     protected string Title => Driver!.Title;
 
-    private WebElement Elements()
-    {
-        return new WebElement(
-            By.XPath("//div[@class=\"card mt-4 top-card\"]/div/div/h5[contains(text(),\"Elements\")]"), Driver!);
-    }
+    private WebElement Elements
+        => new(By.XPath("//div[@class=\"card mt-4 top-card\"]/div/div/h5[contains(text(),\"Elements\")]"), Driver!);
 
 
     public MainPage Open(BrowserNames name, params string[] args)
@@ -26,8 +23,7 @@ public class MainPage : BasePage
 
     public ElementsPage ClickOnElements()
     {
-        var element = Elements();
-            element.Click();
+        Elements.Click();
         return new ElementsPage();
     }
 
