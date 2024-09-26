@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using Tests.Utils.Swd.WebDriverFactory;
 using static Tests.Utils.Swd.Waits.WaitHelper;
-using static Tests.Utils.Swd.WebDriverFactory.WebDriverFactory;
+using static Tests.Utils.Swd.WebDriverFactory.BrowserFacory;
 
 namespace Tests.Utils.Swd.BasePage;
 
@@ -9,7 +9,7 @@ public abstract class BasePage
 {
     public void OpenWith(BrowserNames name, params string[] args)
     {
-        WebDriverFactory.WebDriverFactory.OpenWith(name, args);
+        WebDriverFactory.BrowserFacory.OpenWith(name, args);
     }
 
     public string GetPageTitle() => Driver!.Title;

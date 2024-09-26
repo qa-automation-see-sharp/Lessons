@@ -6,11 +6,11 @@ using static Tests.Utils.Swd.WebDriverFactory.BrowserNames;
 
 namespace Tests.Utils.Swd.WebDriverFactory;
 
-public static class WebDriverFactory
+public static class BrowserFacory
 {
-    private static readonly ThreadLocal<IWebDriver?> ThreadLocalDriver = new();
+    private static readonly ThreadLocal<IWebDriver> ThreadLocalDriver = new();
 
-    public static IWebDriver? Driver => ThreadLocalDriver.Value;
+    public static IWebDriver Driver => ThreadLocalDriver.Value;
 
     public static void OpenWith(BrowserNames browser, params string[] args)
     {

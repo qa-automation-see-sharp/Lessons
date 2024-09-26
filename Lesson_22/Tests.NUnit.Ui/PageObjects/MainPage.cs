@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using Tests.Utils.Swd.BaseElement;
 using Tests.Utils.Swd.BasePage;
-using static Tests.Utils.Swd.WebDriverFactory.WebDriverFactory;
+using static Tests.Utils.Swd.WebDriverFactory.BrowserFacory;
 
 namespace Tests.NUnit.Ui.PageObjects;
 

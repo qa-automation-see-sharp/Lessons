@@ -6,7 +6,7 @@ public class Button : WebElement
 {
     public new string Text => FindElement().Text;
     
-    public Button(By by, IWebDriver driver) : base(by, driver) { }
+    public Button(By by) : base(by) { }
     
     public new void Click()
     {

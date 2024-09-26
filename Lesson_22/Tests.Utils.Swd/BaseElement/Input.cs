@@ -6,7 +6,7 @@ public class Input : WebElement
 {
     public new string Text => FindElement().Text; 
     
-    public Input(By by, IWebDriver driver) : base(by, driver)
+    public Input(By by) : base(by)
     {
     }
 

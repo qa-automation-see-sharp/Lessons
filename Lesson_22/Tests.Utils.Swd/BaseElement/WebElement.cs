@@ -1,5 +1,6 @@
 using System.Drawing;
 using OpenQA.Selenium;
+using Tests.Utils.Swd.WebDriverFactory;
 using static Tests.Utils.Swd.Waits.WaitHelper;
 
 namespace Tests.Utils.Swd.BaseElement;
@@ -19,9 +20,9 @@ public class WebElement
     public Size Size => FindElement().Size;
 
 
-    public WebElement(By by, IWebDriver driver)
+    public WebElement(By by)
     {
-        _driver = driver;
+        _driver = BrowserFacory.Driver;
         _by = by;
     }
 

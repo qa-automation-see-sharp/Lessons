@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using Tests.Utils.Swd.WebDriverFactory;
 using static Tests.Utils.Swd.Waits.WaitHelper;
 
 namespace Tests.Utils.Swd.BaseElement;
@@ -12,7 +13,7 @@ public class WebElements
     public WebElements(By by)
     {
         _by = by;
-        _driver = WebDriverFactory.WebDriverFactory.Driver;
+        _driver = BrowserFacory.Driver;
     }
 
     private IEnumerable<IWebElement> FindElements()
