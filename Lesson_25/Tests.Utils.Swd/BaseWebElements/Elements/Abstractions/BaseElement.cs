@@ -35,7 +35,6 @@ public abstract class BaseElement
                 ? WebDriverFactory.Driver.FindElement(by)
                 : ParentElement.FindElement(by),
             element => element is null or { Displayed: false } or { Enabled: false });
-        ;
     }
 
     public IEnumerable<T> FindElements<T>() where T : BaseElement, new()

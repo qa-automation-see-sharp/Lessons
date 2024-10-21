@@ -1,4 +1,3 @@
-using OpenQA.Selenium;
 using Tests.Utils.Swd.Attribute;
 using Tests.Utils.Swd.BaseElements;
 using Tests.Utils.Swd.BasePage;

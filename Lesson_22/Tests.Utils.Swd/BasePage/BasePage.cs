@@ -1,4 +1,3 @@
-using OpenQA.Selenium;
 using Tests.Utils.Swd.WebDriverFactory;
 using static Tests.Utils.Swd.Waits.WaitHelper;
 using static Tests.Utils.Swd.WebDriverFactory.BrowserFacory;
