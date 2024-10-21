@@ -9,7 +9,7 @@ public abstract class BaseElement
 {
     public By? Locator { get; init; }
 
-    
+
     internal IWebElement Element { get; set; }
 
     public string TagName => FindElement().TagName;

@@ -4,8 +4,7 @@ namespace LibraryV4.Contracts.Dto;
 
 public class BookDto
 {
-    [BsonId]
-    public required Guid Id { get; init; } = default!;
+    [BsonId] public required Guid Id { get; init; } = default!;
 
     public required string Title { get; init; } = default!;
 

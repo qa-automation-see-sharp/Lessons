@@ -11,7 +11,7 @@ public class MongoDbCollection<T>
     {
         _collection = client.GetCollection<T>(collectionName);
     }
-    
+
     public async Task<T?> InsertItem(T item)
     {
         try
@@ -25,6 +25,7 @@ public class MongoDbCollection<T>
 
         return item;
     }
+
     public async Task<T?> GetItem(Expression<Func<T, bool>> filter)
     {
         T? item = default;
@@ -41,6 +42,7 @@ public class MongoDbCollection<T>
 
         return item;
     }
+
     public async Task<List<T>?> GetItems(Expression<Func<T, bool>> filter)
     {
         List<T>? item = default;
@@ -57,6 +59,7 @@ public class MongoDbCollection<T>
 
         return item;
     }
+
     public async Task<bool> DeleteItem(Expression<Func<T, bool>> filter)
     {
         try

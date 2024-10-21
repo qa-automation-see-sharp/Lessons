@@ -33,7 +33,8 @@ public class Inheritance
 
         foreach (var animal in zoo)
         {
-            Console.WriteLine($"{animal.GetType().Name}, who's name is  {animal.Name}, and age: {animal.Age}. Now is making a sound:");
+            Console.WriteLine(
+                $"{animal.GetType().Name}, who's name is  {animal.Name}, and age: {animal.Age}. Now is making a sound:");
 
             // We can use 'is' keyword to check if the object is of a certain type
             if (animal is Dog d)

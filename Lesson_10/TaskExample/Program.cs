@@ -2,14 +2,12 @@
 myTask.Start();
 
 var myClass = new MyClass();
-    myClass.RunJob("Digging");
+myClass.RunJob("Digging");
 
 Task<int> myTask2 = new Task<int>(() => Sum(5, 6));
 myTask2.Start();
 var result = myTask2;
 Console.WriteLine(result);
-
-
 
 
 int Sum(int a, int b) => a + b;

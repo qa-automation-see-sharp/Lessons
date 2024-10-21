@@ -8,7 +8,7 @@ public class TestRunSetup
     {
         Console.WriteLine("----> TestRunSetup OneTimeSetUp <----");
     }
-    
+
     [OneTimeTearDown]
     public void OneTimeTearDown()
     {

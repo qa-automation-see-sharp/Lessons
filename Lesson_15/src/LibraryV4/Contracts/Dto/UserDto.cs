@@ -4,8 +4,7 @@ namespace LibraryV4.Contracts.Dto;
 
 public class UserDto
 {
-    [BsonId]
-    public required Guid Id { get; init; }
+    [BsonId] public required Guid Id { get; init; }
 
     public required string FullName { get; init; } = default!;
 

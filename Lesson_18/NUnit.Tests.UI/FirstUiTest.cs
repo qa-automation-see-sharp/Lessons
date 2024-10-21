@@ -5,7 +5,6 @@ namespace NUnit.Tests.UI;
 [TestFixture, Parallelizable(ParallelScope.All)]
 public class FirstUiTests
 {
-    
     [Test]
     public async Task Test1()
     {
@@ -13,7 +12,7 @@ public class FirstUiTests
         var firstSearchElement = mainPaige
             .Search("Selenium")
             .GetFirstElementInSearch();
-        
+
         Assert.Multiple(() =>
         {
             Assert.That(firstSearchElement, Is.Not.Null);

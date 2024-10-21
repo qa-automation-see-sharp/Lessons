@@ -21,12 +21,9 @@ public class TextBoxTests
         var title = _mainPage.GetPageTitle();
         var elementsPage = _mainPage.ClickOnElements();
 
-        Assert.Multiple(() =>
-        {
-            Assert.That(title, Is.EqualTo("DEMOQA"));
-        });
+        Assert.Multiple(() => { Assert.That(title, Is.EqualTo("DEMOQA")); });
     }
-    
+
     [OneTimeTearDown]
     public void OneTimeTearDown()
     {

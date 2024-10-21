@@ -45,14 +45,14 @@ public static class InitializationHelper
 
     private static BaseElement CreateElement(Type element, By locator)
     {
-        if (element == typeof(Button)) 
+        if (element == typeof(Button))
             return new Button { Locator = locator };
-        if (element == typeof(CheckBox)) 
+        if (element == typeof(CheckBox))
             return new CheckBox { Locator = locator };
-        if (element == typeof(Input)) 
+        if (element == typeof(Input))
             return new Input { Locator = locator };
-        
-        if (element == typeof(WebElements)) 
+
+        if (element == typeof(WebElements))
             return new WebElements { Locator = locator };
 
 

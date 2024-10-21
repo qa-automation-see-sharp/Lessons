@@ -28,12 +28,12 @@ public class WebElements
     {
         return FindElements().ElementAt(index);
     }
-    
+
     public void SomeAction(int index, string text)
     {
-       var element = GetElement(index);
+        var element = GetElement(index);
 
-       Wait(() => element.SendKeys(text));
+        Wait(() => element.SendKeys(text));
     }
 
     public IWebElement? FirstOrDefault(Func<IWebElement, bool> condition)

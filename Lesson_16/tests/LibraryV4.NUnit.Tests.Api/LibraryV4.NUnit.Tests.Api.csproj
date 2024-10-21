@@ -18,7 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\LibraryV4.Tests.Utils\LibraryV4.Tests.Utils.csproj" />
+        <ProjectReference Include="..\LibraryV4.Tests.Utils\LibraryV4.Tests.Utils.csproj"/>
     </ItemGroup>
 
 </Project>

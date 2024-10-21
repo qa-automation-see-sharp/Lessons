@@ -6,7 +6,7 @@ namespace BackEndApp.Service;
 public class WeatherService
 {
     private readonly HttpClient _httpClient;
-    private const string ApiKey = "85d77956baca547d1a34188b7e564e22"; 
+    private const string ApiKey = "85d77956baca547d1a34188b7e564e22";
     private const string WeatherEndpoint = "weather";
 
     public WeatherService(HttpClient httpClient)

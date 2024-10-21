@@ -9,7 +9,7 @@ namespace Tests.Utils.Swd.PageObjects;
 public class WebTablePage : BasePage
 {
     private string Url => "https://demoqa.com/webtables";
-    
+
     [FindBy(XPath = "//h1[contains(text(),\"Web Tables\")]")]
     public Element? Title { get; set; }
 
@@ -30,7 +30,7 @@ public class WebTablePage : BasePage
 
     public WebTablePage ClickOnRowWithText(string text)
     {
-         WebTable?.Rows.GetCellFromRows(text).Click();
-         return this;
+        WebTable?.Rows.GetCellFromRows(text).Click();
+        return this;
     }
 }

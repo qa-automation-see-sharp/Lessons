@@ -7,8 +7,6 @@ namespace Tests.Utils.Swd.PageObjects;
 
 public class ElementsPage : BasePage
 {
-    
-
     [FindBy(XPath = "//span[contains(text(),\"Text Box\")]")]
     private Button? TextBox { get; set; }
 

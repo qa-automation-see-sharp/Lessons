@@ -19,6 +19,7 @@ public static class WebDriverFactory
                 {
                     chromeOptions.AddArgument(arg);
                 }
+
                 driver = new ChromeDriver(chromeOptions);
                 break;
             case Firefox:
@@ -27,6 +28,7 @@ public static class WebDriverFactory
                 {
                     firefoxOptions.AddArgument(arg);
                 }
+
                 driver = new FirefoxDriver(firefoxOptions);
                 break;
             case Edge:
@@ -35,11 +37,13 @@ public static class WebDriverFactory
                 {
                     edgeOptions.AddArgument(arg);
                 }
+
                 driver = new EdgeDriver(edgeOptions);
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(browser), browser, null);
         }
+
         return driver;
     }
 }

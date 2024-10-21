@@ -10,7 +10,7 @@ public abstract class BasePage
     {
         BrowserFactory.OpenWith(name, args);
     }
-    
+
     protected BasePage()
     {
         Helpers.InitializationHelper.InitializeElements(this);

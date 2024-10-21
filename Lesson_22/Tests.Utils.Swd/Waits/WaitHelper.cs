@@ -22,7 +22,7 @@ public static class WaitHelper
 
         return result;
     }
-    
+
     public static void Wait(Action action)
     {
         WaitForAction(action, 10, Timeout);

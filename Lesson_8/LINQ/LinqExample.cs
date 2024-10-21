@@ -90,6 +90,7 @@ public class LinqExample
         {
             Console.WriteLine($"Number: {number}");
         }
+
         Console.WriteLine();
     }
 

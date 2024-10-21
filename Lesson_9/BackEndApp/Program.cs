@@ -22,6 +22,7 @@ app.MapGet("/weather", async (string city, string countryConde, WeatherService w
         {
             return Results.BadRequest("Please provide a city name.");
         }
+
         try
         {
             // Get weather data from the service

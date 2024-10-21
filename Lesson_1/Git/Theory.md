@@ -49,6 +49,8 @@ Git is widely used in the software development industry and is an essential tool
 - dotnet new console --output MyProject
 - dotnet sln add MyProject
 
-Here is a link to documentation for [dotnet new sln](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-sln) command.
+Here is a link to documentation for [dotnet new sln](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-sln)
+command.
 
-Here is a link to documentation for [dotnet new ](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) command.
+Here is a link to documentation for [dotnet new ](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
+command.

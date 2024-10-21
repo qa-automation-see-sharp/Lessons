@@ -30,9 +30,9 @@ public abstract class BaseElement
     protected IWebElement FindElement()
     {
         var by = Locator;
-        return WaitAndHandleExceptionOrResult(()=> ParentElement is null
-                    ? WebDriverFactory.Driver.FindElement(by)
-                    : ParentElement.FindElement(by),
+        return WaitAndHandleExceptionOrResult(() => ParentElement is null
+                ? WebDriverFactory.Driver.FindElement(by)
+                : ParentElement.FindElement(by),
             element => element is null or { Displayed: false } or { Enabled: false });
         ;
     }
@@ -41,16 +41,16 @@ public abstract class BaseElement
     {
         var by = Locator;
         return WaitAndHandleExceptionOrResult(() =>
-        {
-            var elements = (ParentElement is null
-                    ? WebDriverFactory.Driver.FindElements(by)
-                    : ParentElement.FindElements(by))
-                .Select(e => new T { Element = e, Locator = by }).ToList();
-            return elements;
-        },
-        elements => elements.Count == 0);
+            {
+                var elements = (ParentElement is null
+                        ? WebDriverFactory.Driver.FindElements(by)
+                        : ParentElement.FindElements(by))
+                    .Select(e => new T { Element = e, Locator = by }).ToList();
+                return elements;
+            },
+            elements => elements.Count == 0);
     }
-    
+
     public void Clear() => WaitAndHandleExceptions(() => FindElement().Clear());
 
     public void SendKeys(string text) => WaitAndHandleExceptions(() => FindElement().SendKeys(text));

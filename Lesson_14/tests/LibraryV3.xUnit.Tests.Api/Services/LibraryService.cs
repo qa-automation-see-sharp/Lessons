@@ -158,7 +158,7 @@ public class LibraryService : IAsyncLifetime
 
     public async Task InitializeAsync()
     {
-       Console.WriteLine("Set Up from LibraryService");
+        Console.WriteLine("Set Up from LibraryService");
     }
 
     public async Task DisposeAsync()

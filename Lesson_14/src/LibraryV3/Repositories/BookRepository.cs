@@ -5,6 +5,7 @@ namespace LibraryV3.Repositories;
 public class BookRepository : IBookRepository
 {
     private readonly ILogger<BookRepository> _logger;
+
     public void AddBook(Book book)
     {
         _books.Add(book);

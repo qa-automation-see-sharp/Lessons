@@ -18,13 +18,13 @@ public static class DeleteBookEnpoidnts
                 IUserAuthorizationService service) =>
             {
                 if (!service.IsAuthorizedByToken(token)) return Results.Unauthorized();
-                
+
                 var book = repository.GetBook(b => b.Title == title && b.Author == author);
-                
+
                 if (book is null) return Results.NotFound($"Book :{title} by {author} not found");
 
                 repository.Delete(b => b.Title == title && b.Author == author);
-                
+
                 return Results.Ok($"{title} by {author} deleted");
             })
             .WithName(Name)

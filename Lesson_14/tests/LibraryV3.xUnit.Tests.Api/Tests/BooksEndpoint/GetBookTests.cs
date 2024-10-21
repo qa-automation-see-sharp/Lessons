@@ -15,7 +15,7 @@ public class GetBookTests : IAsyncLifetime, IClassFixture<LibraryService>
     {
         _libraryService = libraryService;
     }
-    
+
     //[SetUp] #2
     public async Task InitializeAsync()
     {
@@ -25,7 +25,7 @@ public class GetBookTests : IAsyncLifetime, IClassFixture<LibraryService>
         _book = DataHelper.CreateBook();
         await _libraryService.CreateBook(_book);
     }
-    
+
 
     [Fact]
     public async Task GetBooksByTitle_ExistingBook_ReturnsOk()

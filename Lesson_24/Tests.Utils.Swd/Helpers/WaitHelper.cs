@@ -12,7 +12,8 @@ public static class WaitHelper
         return WaitAndHandleExceptionsOrResult(func, condition, 10, Timeout);
     }
 
-    public static T WaitAndHandleExceptionsOrResult<T>(Func<T> func, Func<T, bool> condition, int retryCount, TimeSpan timeout)
+    public static T WaitAndHandleExceptionsOrResult<T>(Func<T> func, Func<T, bool> condition, int retryCount,
+        TimeSpan timeout)
     {
         var result = Handle<Exception>()
             .OrResult(condition)
@@ -34,7 +35,7 @@ public static class WaitHelper
             .WaitAndRetry(retryCount, _ => timeout)
             .ExecuteAndCapture(func.Invoke).Result;
     }
-    
+
     public static void WaitAndHandleExceptions(Action func)
     {
         WaitAndHandleExceptions(func, 10, Timeout);
@@ -42,7 +43,7 @@ public static class WaitHelper
 
     public static void WaitAndHandleExceptions(Action func, int retryCount, TimeSpan timeout)
     {
-         Handle<Exception>()
+        Handle<Exception>()
             .WaitAndRetry(retryCount, _ => timeout)
             .ExecuteAndCapture(func.Invoke);
     }

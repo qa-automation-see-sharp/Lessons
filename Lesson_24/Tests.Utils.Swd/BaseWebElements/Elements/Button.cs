@@ -10,13 +10,13 @@ public class Button : BaseElement
     {
         var action = new Actions(WebDriverFactory.Driver);
         var elementToClick = FindElement();
-            action.ContextClick(elementToClick).Build().Perform();
+        action.ContextClick(elementToClick).Build().Perform();
     }
 
     public void DoubleClick()
     {
         var action = new Actions(WebDriverFactory.Driver);
         var elementToClick = FindElement();
-            action.DoubleClick(elementToClick).Build().Perform();
+        action.DoubleClick(elementToClick).Build().Perform();
     }
 }

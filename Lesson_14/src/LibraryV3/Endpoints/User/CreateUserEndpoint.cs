@@ -9,17 +9,18 @@ public static class CreateUserEndpoint
     public static IEndpointRouteBuilder MapCreateUser(this IEndpointRouteBuilder app)
     {
         app.MapPost(ApiEndpoints.Users.Register, (
-            Contracts.Domain.User user,
-            IUserRepository repository) =>
-        {
-            if (repository.GetUser(user.NickName!) is not null)
+                Contracts.Domain.User user,
+                IUserRepository repository) =>
             {
-                return Results.BadRequest($"User with nickname {user.NickName} already exists");
-            }
+                if (repository.GetUser(user.NickName!) is not null)
+                {
+                    return Results.BadRequest($"User with nickname {user.NickName} already exists");
+                }
 
-            repository.AddUser(user);
+                repository.AddUser(user);
 
-            return Results.Created(ApiEndpoints.Users.Register, new { nickName = user.NickName , fullName = user.FullName});
+                return Results.Created(ApiEndpoints.Users.Register,
+                    new { nickName = user.NickName, fullName = user.FullName });
             })
             .WithName(Name)
             .Produces<Contracts.Domain.User>()

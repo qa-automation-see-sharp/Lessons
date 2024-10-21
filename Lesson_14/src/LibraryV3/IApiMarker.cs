@@ -1,3 +1,5 @@
 namespace LibraryV3;
 
-public interface IApiMarker { }
+public interface IApiMarker
+{
+}

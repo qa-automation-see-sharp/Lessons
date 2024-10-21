@@ -9,15 +9,15 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0"/>
-        <PackageReference Include="Serilog.AspNetCore" Version="8.0.2" />
+        <PackageReference Include="Serilog.AspNetCore" Version="8.0.2"/>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Contracts\Mappings\" />
-      <Folder Include="Contracts\Requests\" />
-      <Folder Include="Contracts\Responses\" />
-      <Folder Include="Database\" />
+        <Folder Include="Contracts\Mappings\"/>
+        <Folder Include="Contracts\Requests\"/>
+        <Folder Include="Contracts\Responses\"/>
+        <Folder Include="Database\"/>
     </ItemGroup>
 
 </Project>

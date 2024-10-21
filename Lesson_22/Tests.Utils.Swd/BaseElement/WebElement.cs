@@ -29,7 +29,7 @@ public class WebElement
     protected IWebElement FindElement()
     {
         _element = Wait(
-             () => _driver.FindElement(_by),
+            () => _driver.FindElement(_by),
             element => element is null or { Displayed: false } or { Enabled: false });
         return _element;
     }

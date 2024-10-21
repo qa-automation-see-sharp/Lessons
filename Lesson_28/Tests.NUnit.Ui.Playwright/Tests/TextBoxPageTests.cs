@@ -1,4 +1,3 @@
-using System.Net.Mime;
 using Microsoft.Playwright;
 using NUnit.Framework.Interfaces;
 using static Microsoft.Playwright.Playwright;
@@ -64,7 +63,7 @@ public class TextBoxPageTests
     public async Task CheckLabelsAreDisplayed()
     {
         var userNameLabel = await Page.Locator("id=userName-label")
-            .Filter(new LocatorFilterOptions{ HasText = "Full Name"})
+            .Filter(new LocatorFilterOptions { HasText = "Full Name" })
             .TextContentAsync();
         var userEmailLabel = await Page.TextContentAsync("#userEmail-label");
         var currentAddressLabel = await Page.TextContentAsync("#currentAddress-label");
@@ -103,9 +102,8 @@ public class TextBoxPageTests
             Assert.That(textToAssert.Contains("7270 W Manchester Ave, Los Angeles, CA 90045"));
             Assert.That(textToAssert.Contains("13200 Pacific Promenade, Playa Vista, CA 90094"));
         });
-        
     }
-    
+
     [TearDown]
     public async Task TearDown()
     {
@@ -129,7 +127,7 @@ public class TextBoxPageTests
         var currentTime = DateTime.Now.ToString("HH-mm-ss");
         var currentTestFixture = TestContext.CurrentContext.Test.ClassName;
         var screenShotName = $"{TestContext.CurrentContext.Test.Name}.png";
-        var path = Path.Combine(currentDirectory,  currentDate, currentTime, currentTestFixture, screenShotName);
+        var path = Path.Combine(currentDirectory, currentDate, currentTime, currentTestFixture, screenShotName);
         await Page.ScreenshotAsync(new PageScreenshotOptions { Path = path });
     }
 }

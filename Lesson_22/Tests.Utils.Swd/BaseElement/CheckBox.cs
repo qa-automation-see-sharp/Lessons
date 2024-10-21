@@ -4,7 +4,9 @@ namespace Tests.Utils.Swd.BaseElement;
 
 public class CheckBox : WebElement
 {
-    public CheckBox(By by) : base(by) { }
+    public CheckBox(By by) : base(by)
+    {
+    }
 
     public bool Checked => FindElement().Selected;
 

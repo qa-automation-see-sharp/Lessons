@@ -5,7 +5,6 @@ namespace ObjectsAndOOP;
  * abstract methods (methods without implementation) and non-abstract methods (methods with implementation).
  * Abstract classes are used to provide a common definition of a base class that multiple derived classes can share.
  */
-
 /* Key Points About Abstract Classes in C#.
  * Cannot Be Instantiated: You cannot create an instance of an abstract class directly.
  * Abstract Methods: Abstract classes can have abstract methods, which are declared without any implementation.
@@ -18,13 +17,11 @@ namespace ObjectsAndOOP;
  * Usage: Abstract classes are used when you want to define a common base class with some shared functionality and some
  * functionality that must be implemented by derived classes.
  */
-
 /* Summary:
  * abstract classes in C# are powerful tools for creating a base class with common functionality and abstract members
  * that must be implemented by derived classes.
  * They provide a balance between the flexibility of interfaces and the shared implementation of base classes.
  */
-
 /* Abstraction is the concept of hiding the complex implementation details and
  * showing only the necessary features of an object. It is achieved using
  * abstract classes and interfaces.

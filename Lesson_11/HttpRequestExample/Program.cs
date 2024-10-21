@@ -1,7 +1,6 @@
 ﻿//HTTP - Hyper Text Transfer Protocol
 
 
-
 using System.Text;
 using Newtonsoft.Json;
 
@@ -126,7 +125,6 @@ string responseStringFromPut = await responsePut.Content.ReadAsStringAsync();
 var payloadPost = new StringContent("Hello, from POST");
 HttpResponseMessage responsePost = await httpClient.PostAsync(uri, new StringContent("Hello, from POST"));
 string responseStringFromPost = await responsePost.Content.ReadAsStringAsync();
-
 
 
 // DELETE

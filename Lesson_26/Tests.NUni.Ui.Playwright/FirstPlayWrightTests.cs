@@ -19,9 +19,9 @@ public class Tests
         {
             Headless = false
         });
-        
+
         var page = await browser.NewPageAsync();
-        
+
 
         await page.GotoAsync("https://demoqa.com");
         await page.ClickAsync("text=Elements");
@@ -29,6 +29,6 @@ public class Tests
         await page.GetByTestId("Toggle").ClickAsync();
         await page.ClickAsync("text=Desktop");
         await page.ClickAsync("text=Documents");
-        await page.ScreenshotAsync(new PageScreenshotOptions{ Path = "screenshot.png" });
+        await page.ScreenshotAsync(new PageScreenshotOptions { Path = "screenshot.png" });
     }
 }

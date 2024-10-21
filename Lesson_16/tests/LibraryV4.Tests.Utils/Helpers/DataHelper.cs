@@ -27,7 +27,7 @@ public static class DataHelper
             .RuleFor(o => o.YearOfRelease, f => f.Random.Number(1850, 2024))
             .Generate();
     }
-    
+
     public static User CreateUser()
     {
         return new Faker<User>()
@@ -37,7 +37,7 @@ public static class DataHelper
             .RuleFor(o => o.Password, f => f.Internet.Password())
             .Generate();
     }
-    
+
     public static UserDto CreateUserDto()
     {
         return new Faker<UserDto>()

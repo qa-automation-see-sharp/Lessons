@@ -18,11 +18,11 @@ public class MainPage : BasePage
 
         return this;
     }
-    
+
     public MainPage GoToCardWithText(string elementName)
     {
-        var card = Elements.FirstOrDefault(e=> e.Text.Contains(elementName));
-            card?.Click();
+        var card = Elements.FirstOrDefault(e => e.Text.Contains(elementName));
+        card?.Click();
         return this;
     }
 }

@@ -16,8 +16,10 @@ public static class GetBookEndpoints
                 IBookRepository repository) =>
             {
                 var result = await repository.GetMany(b => b.Title == title);
-                
-                return result.Count is 0 ? Results.NotFound($"The books this title: {title}, was not found.") : Results.Ok(result);
+
+                return result.Count is 0
+                    ? Results.NotFound($"The books this title: {title}, was not found.")
+                    : Results.Ok(result);
             })
             .WithName(Name)
             .Produces<List<Book>>()
@@ -36,8 +38,10 @@ public static class GetBookEndpoints
                 IBookRepository repository) =>
             {
                 var result = await repository.GetMany(b => b.Author == author);
-                
-                return result.Count is 0 ? Results.NotFound($"The books by author: {author}, was not found.") : Results.Ok(result);
+
+                return result.Count is 0
+                    ? Results.NotFound($"The books by author: {author}, was not found.")
+                    : Results.Ok(result);
             })
             .WithName(GetAllBooksByAuthor)
             .Produces<List<Book>>()

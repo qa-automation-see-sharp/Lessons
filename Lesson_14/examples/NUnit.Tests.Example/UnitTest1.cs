@@ -3,9 +3,8 @@ namespace NUnit.Tests.Example;
 public class Tests
 {
     private int _numberToAssert = 1;
-    
-    [SetUp]
 
+    [SetUp]
     [Test]
     public async Task Test1()
     {
@@ -29,12 +28,13 @@ public class Tests
     {
         Assert.That(_numberToAssert, Is.EqualTo(number));
     }
+
     [TestCaseSource(nameof(GetTestData))]
     public void Test3(int number)
     {
         Assert.That(_numberToAssert, Is.EqualTo(number));
     }
-    
+
 
     public static IEnumerable<TestCaseData> GetTestData()
     {

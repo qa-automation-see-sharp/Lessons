@@ -20,6 +20,7 @@ public class FirstGroupOfTests : TestRunSetup
     {
         Console.WriteLine("----> FirstGroupOfTests TearDown <----");
     }
+
     [OneTimeTearDown]
     public void OneTimeTearDownFirstGroupOfTests()
     {

@@ -7,7 +7,7 @@ namespace LibraryV3.Endpoints.User;
 public static class LogInEndpoint
 {
     public const string Name = "LogIn";
-    
+
     public static IEndpointRouteBuilder MapLogIn(this IEndpointRouteBuilder app)
     {
         app.MapGet(ApiEndpoints.Users.Login, (
@@ -27,9 +27,9 @@ public static class LogInEndpoint
                 {
                     return Results.Ok(tokenService.GetToken(nickName));
                 }
-                
+
                 var token = tokenService.GenerateToken(nickName, password);
-                return Results.Ok(token); 
+                return Results.Ok(token);
             })
             .WithName(Name)
             .Produces<AuthorizationToken>()

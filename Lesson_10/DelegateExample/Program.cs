@@ -3,7 +3,7 @@ var myDelegate = new MyDelegate(myClass.Method1);
 var myDelegate2 = new MyDelegate(myClass.Method2);
 
 var both = myDelegate + myDelegate2;
-    both("Hello, from delegate");
+both("Hello, from delegate");
 
 var anonimusDelegate = new MyDelegate(delegate { Console.WriteLine("Hello, from anonimus delegate"); });
 

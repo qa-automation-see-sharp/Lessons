@@ -8,7 +8,7 @@ namespace Tests.NUnit.Ui.Playwright;
 [TestFixture]
 public class Tests : PlaywrightTest
 {
-    private  IPage Page { get; set; }
+    private IPage Page { get; set; }
 
     [SetUp]
     public async Task Setup()
@@ -20,16 +20,14 @@ public class Tests : PlaywrightTest
             Headless = false,
             Args = new List<string> { "--start-maximized" }
         });
-        
-        IBrowserContext context = await browser.NewContextAsync( new BrowserNewContextOptions
+
+        IBrowserContext context = await browser.NewContextAsync(new BrowserNewContextOptions
         {
             ViewportSize = ViewportSize.NoViewport,
-            
         });
 
         Page = await context.NewPageAsync();
         await Page.GotoAsync("https://demoqa.com");
-
     }
 
     [Test]
@@ -43,7 +41,7 @@ public class Tests : PlaywrightTest
         await Page.ScreenshotAsync(new PageScreenshotOptions { Path = "screenshot.png" });
     }
 
-    
+
     //Code Generated with Playwright Test Recorder
     [Test]
     public async Task Test2()
@@ -65,7 +63,7 @@ public class Tests : PlaywrightTest
         await Expect(Page.Locator("#email")).ToContainTextAsync("email@gmail.com");
         await Expect(Page.Locator("#output")).ToContainTextAsync("some address");
     }
-    
+
     [TearDown]
     public async Task TearDown()
     {

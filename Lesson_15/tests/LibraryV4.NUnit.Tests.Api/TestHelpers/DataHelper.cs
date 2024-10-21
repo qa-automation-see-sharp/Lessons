@@ -13,6 +13,7 @@ public static class DataHelper
             YearOfRelease = new Random().Next(1850, 2024)
         };
     }
+
     public static Book CreateBook(string title, string author)
     {
         return new Book
@@ -22,7 +23,7 @@ public static class DataHelper
             YearOfRelease = new Random().Next(1850, 2024)
         };
     }
-    
+
     public static User CreateUser()
     {
         return new User

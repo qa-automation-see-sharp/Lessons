@@ -11,9 +11,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.8" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.8"/>
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0"/>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
         <PackageReference Include="NUnit" Version="3.13.3"/>
         <PackageReference Include="NUnit3TestAdapter" Version="4.2.1"/>
         <PackageReference Include="NUnit.Analyzers" Version="3.6.1"/>
@@ -21,12 +21,12 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="EndpointsTests\BooksEndpointTest\" />
-      <Folder Include="EndpointsTests\UsersEndpointTests\" />
+        <Folder Include="EndpointsTests\BooksEndpointTest\"/>
+        <Folder Include="EndpointsTests\UsersEndpointTests\"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\LibraryV4\LibraryV4.csproj" />
+        <ProjectReference Include="..\..\src\LibraryV4\LibraryV4.csproj"/>
     </ItemGroup>
 
 </Project>

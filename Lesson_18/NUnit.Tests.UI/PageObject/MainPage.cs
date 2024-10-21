@@ -21,9 +21,9 @@ public class MainPage
     public MainPage Search(string text)
     {
         var searchInput = _driver.FindElement(SearchInput);
-            searchInput.SendKeys(text);
-            searchInput.SendKeys(Keys.Enter);
-        
+        searchInput.SendKeys(text);
+        searchInput.SendKeys(Keys.Enter);
+
         return this;
     }
 

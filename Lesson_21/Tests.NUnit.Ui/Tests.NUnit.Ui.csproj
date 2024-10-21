@@ -18,7 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Test.Utils.Swd\Test.Utils.Swd.csproj" />
+        <ProjectReference Include="..\Test.Utils.Swd\Test.Utils.Swd.csproj"/>
     </ItemGroup>
 
 </Project>

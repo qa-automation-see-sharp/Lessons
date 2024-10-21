@@ -30,7 +30,7 @@ public class LibraryV4HttpService
         var url = TestApiEndpoint.Users.Login(User.NickName, User.Password);
         var response = await _httpClient.GetAsync(url);
         LogResponse(response, url);
-        
+
         var jsonString = await response.Content.ReadAsStringAsync();
         AuthorizationToken = JsonConvert.DeserializeObject<AuthorizationToken>(jsonString);
     }

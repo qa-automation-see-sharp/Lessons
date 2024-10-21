@@ -6,19 +6,18 @@ namespace ObjectsAndOOP;
  * Interfaces are used to define capabilities that can be shared among different classes,
  * enabling polymorphism and multiple inheritance of behavior.
  */
-
 /* Key Points About Interfaces in C#.
  * Definition: Interfaces define a contract that implementing classes or structs must adhere to. They cannot contain any implementation.
- * 
+ *
  * Syntax: Interfaces are declared using the interface keyword. Usually named with a leading "I" to indicate it's
  * an interface.
- * 
+ *
  * Implementation: A class or struct implements an interface using the : InterfaceName syntax and must provide
  * an implementation for all interface members.
- * 
+ *
  * Multiple Inheritance: A class or struct can implement multiple interfaces, which allows for multiple inheritance
  * of behavior.
- * 
+ *
  * Polymorphism: Interfaces enable polymorphic behavior, allowing objects to be treated based on the interface they
  * implement rather than their concrete type.
  */
@@ -32,11 +31,11 @@ public class InterfaceExample
     {
         var rectangle = new Rectangle(5, 10);
         var circle = new Circle(5);
-        
+
         Console.WriteLine($"Rectangle Area: {rectangle.Area()}");
         Console.WriteLine($"Rectangle Perimeter: {rectangle.Perimeter()}");
-        
-        var shapes = new List<IShape> {rectangle, circle};
+
+        var shapes = new List<IShape> { rectangle, circle };
         foreach (var shape in shapes)
         {
             Console.WriteLine($"Area: {shape.Area()}");
