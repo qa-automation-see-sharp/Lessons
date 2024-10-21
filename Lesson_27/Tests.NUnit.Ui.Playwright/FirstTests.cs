@@ -1,14 +1,14 @@
 using System.Text.RegularExpressions;
 using Microsoft.Playwright;
-using static Microsoft.Playwright.Assertions;
+using Microsoft.Playwright.NUnit;
 using static Microsoft.Playwright.Playwright;
 
 namespace Tests.NUnit.Ui.Playwright;
 
 [TestFixture]
-public class Tests
+public class Tests : PlaywrightTest
 {
-    private IPage Page { get; set; }
+    private  IPage Page { get; set; }
 
     [SetUp]
     public async Task Setup()
